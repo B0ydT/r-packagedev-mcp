@@ -38,8 +38,8 @@ Building a standalone server allows:
 ### From source
 
 ```bash
-git clone https://github.com/B0ydT/r_packagedev_mcp.git
-cd r_packagedev_mcp
+git clone https://github.com/B0ydT/r-packagedev-mcp.git
+cd r-packagedev-mcp
 npm install
 npm run build
 ```
@@ -61,7 +61,7 @@ The server communicates over **stdio** (standard input/output), which is the def
   "mcpServers": {
     "r-packagedev": {
       "command": "node",
-      "args": ["/path/to/r_packagedev_mcp/dist/index.js"]
+      "args": ["/path/to/r-packagedev-mcp/dist/index.js"]
     }
   }
 }
@@ -75,7 +75,7 @@ The server communicates over **stdio** (standard input/output), which is the def
     "r-packagedev": {
       "type": "stdio",
       "command": "node",
-      "args": ["/path/to/r_packagedev_mcp/dist/index.js"]
+      "args": ["/path/to/r-packagedev-mcp/dist/index.js"]
     }
   }
 }
@@ -177,7 +177,7 @@ Create an **automation token** at <https://www.npmjs.com/settings/\<your-usernam
 The MCP registry uses [GitHub OIDC](https://modelcontextprotocol.io/registry/github-actions) for passwordless authentication — **no extra secret is needed**.  
 You only need to authorise the MCP Registry GitHub App for your repository once:
 
-1. Visit <https://github.com/apps/mcp-registry> and install / authorise it for `B0ydT/r_packagedev_mcp`.
+1. Visit <https://github.com/apps/mcp-registry> and install / authorise it for `B0ydT/r-packagedev-mcp`.
 2. The `id-token: write` permission in the workflow is already set; no further action is required.
 
 #### 3 · Smithery (optional)
