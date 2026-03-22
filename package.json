@@ -1,6 +1,6 @@
 {
   "name": "r-packagedev-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for R package development using usethis, devtools, renv, and testthat",
   "main": "dist/index.js",
   "bin": {
