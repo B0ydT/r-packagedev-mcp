@@ -35,6 +35,29 @@ Building a standalone server allows:
 
 ## Installation
 
+### Via npx (recommended – no install required)
+
+Run the server directly without any installation step:
+
+```bash
+npx r-packagedev-mcp
+```
+
+### Via npm (global install)
+
+```bash
+npm install -g r-packagedev-mcp
+r-packagedev-mcp
+```
+
+### Via MCP registry
+
+`r-packagedev-mcp` is listed on the [MCP registry](https://registry.modelcontextprotocol.io/servers/io.github.B0ydT/r-packagedev-mcp). Most MCP clients can install it directly using the registry identifier:
+
+```
+io.github.B0ydT/r-packagedev-mcp
+```
+
 ### From source
 
 ```bash
@@ -42,11 +65,6 @@ git clone https://github.com/B0ydT/r-packagedev-mcp.git
 cd r-packagedev-mcp
 npm install
 npm run build
-```
-
-### Running the server
-
-```bash
 node dist/index.js
 ```
 
@@ -60,8 +78,8 @@ The server communicates over **stdio** (standard input/output), which is the def
 {
   "mcpServers": {
     "r-packagedev": {
-      "command": "node",
-      "args": ["/path/to/r-packagedev-mcp/dist/index.js"]
+      "command": "npx",
+      "args": ["-y", "r-packagedev-mcp"]
     }
   }
 }
@@ -74,8 +92,8 @@ The server communicates over **stdio** (standard input/output), which is the def
   "servers": {
     "r-packagedev": {
       "type": "stdio",
-      "command": "node",
-      "args": ["/path/to/r-packagedev-mcp/dist/index.js"]
+      "command": "npx",
+      "args": ["-y", "r-packagedev-mcp"]
     }
   }
 }
